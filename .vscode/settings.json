@@ -1,0 +1,23 @@
+{
+    "eslint.format.enable": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.packageManager": "yarn",
+    "eslint.validate": [
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "typecript",
+            "autoFix": true
+        },
+        {
+            "language": "typecriptreact",
+            "autoFix": true
+        }
+    ]
+}

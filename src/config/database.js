@@ -1,11 +1,12 @@
 module.exports = {
   dialect: "postgres",
-  host: "localgost",
+  database: "postgres",
   username: "postgres",
-  password: "secret",
-  database: "localhost",
+  password: "123",
+  host: "localhost",
+  port: 5432,
   define: {
-    timestamp: true, // Cria duas colunas : createdAt e updateAt
+    timestamps: true, // Cria duas colunas : createdAt e updateAt
     underscored: true, // nomenclatura _ (não camelCase) customersGroup > customers_group
     underscoredAll: true,
   },

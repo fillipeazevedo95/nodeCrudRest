@@ -1,21 +1,18 @@
 import Sequelize, { Model } from "sequelize";
 
-class customer extends Model {
+class Contact extends Model {
   static init(sequelize) {
     super.init(
       {
         name: Sequelize.STRING,
         email: Sequelize.STRING,
-        status: Sequelize.ENUM("ACTIVE", "ARCHIVED"),
+        password_hash: Sequelize.STRING,
+        provider: Sequelize.BOOLEAN,
       },
       {
         sequelize,
       }
     );
-  }
-
-  static associate(models) {
-    this.hasMany(models.Contact);
   }
 }
 

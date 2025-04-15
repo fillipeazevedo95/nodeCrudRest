@@ -6,14 +6,17 @@ class Contact extends Model {
       {
         name: Sequelize.STRING,
         email: Sequelize.STRING,
-        password_hash: Sequelize.STRING,
-        provider: Sequelize.BOOLEAN,
+        status: Sequelize.ENUM("ACTIVE", "ARCHIVED"),
       },
       {
         sequelize,
       }
     );
   }
+
+  static associate(models) {
+    this.belongsTo(models.Customer, { foreignKey: "customer_id" });
+  }
 }
 
-export default Customer;
+export default Contact;

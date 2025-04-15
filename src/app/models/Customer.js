@@ -1,6 +1,6 @@
 import Sequelize, { Model } from "sequelize";
 
-class Contact extends Model {
+class Customer extends Model {
   static init(sequelize) {
     super.init(
       {
@@ -10,12 +10,13 @@ class Contact extends Model {
       },
       {
         sequelize,
+        modelName: "Customer",
       }
     );
   }
 
   static associate(models) {
-    this.belongsTo(models.Customer, { foreignKey: "customer_id" });
+    this.hasMany(models.Contact);
   }
 }
 

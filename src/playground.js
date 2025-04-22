@@ -38,6 +38,8 @@ class Playground {
         },
       },
       order: ["name"],
+      limit: 2,
+      offset: 2 * 2 - 2, // limit * page - limit
     });
 
     console.log(JSON.stringify(customers, null, 2));
